@@ -41,13 +41,14 @@ class PageObj:
     def _set_location(self):
         location = self.browser.find_element_by_id('placein')
         location.send_keys("Galveston")
-        time.sleep(3)
+        time.sleep(2)
         location_results = self.browser.find_element_by_id('autoComplete_results_list')
         location_results.find_elements_by_tag_name('li')[0].click()
 
     def _submit(self):
         submit = self.browser.find_element_by_id('z-fetch-report')
         submit.click()
+        time.sleep(1)
 
     def _get_page(self):
         self.browser = Firefox()
