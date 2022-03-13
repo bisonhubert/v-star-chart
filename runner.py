@@ -1,3 +1,5 @@
+import time
+
 from page import Page
 from parser import PlanetParser
 
@@ -39,4 +41,6 @@ class Runner:
         return self
 
 
+print(f"Start time: {time.asctime()}")
 runner = Runner(hours=HOURS, minutes=MINUTES).run(url=URL)
+print(f"End time: {time.asctime()}")
