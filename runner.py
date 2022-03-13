@@ -3,14 +3,14 @@ from parser import PlanetParser
 
 # HOUR_RANGE = list(range(12, 25))
 # MINUTES = list(range(1, 61))
-URL = 'https://astrolibrary.org/free-birth-chart/'
+URL = "https://astrolibrary.org/free-birth-chart/"
 HOURS = list(range(12, 14))
 MINUTES = list(range(1, 3))
 
 
 class Runner:
-    FILEPATH = 'charts'
-    EXTENSION = 'md'
+    FILEPATH = "charts"
+    EXTENSION = "md"
 
     def __init__(self, hours=None, minutes=None):
         self.hours = None if hours is None else hours
@@ -19,13 +19,13 @@ class Runner:
     def _make_files(self, hour=None, minute=None, planets=None):
         if planets is None:
             return
-        timestamp = ''
+        timestamp = ""
         if hour is not None and minute is not None:
-            timestamp = f'{hour:02}{minute:02}'
+            timestamp = f"{hour:02}{minute:02}"
         for planet in planets:
             filename = f"{timestamp}_{planet.get('name')}.{self.EXTENSION}"
             f = open(f"{self.FILEPATH}/{filename}", "w")
-            f.write(planet.get('content'))
+            f.write(planet.get("content"))
             f.close()
 
     def run(self, url=None):
