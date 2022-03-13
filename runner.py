@@ -1,8 +1,17 @@
-from driver import PageObj
-from parser import Parser
+from page import Page
+from parser import PlanetParser
 
-page_obj = PageObj(url='https://astrolibrary.org/free-birth-chart/').run()
-parser = Parser(html=page_obj.report_html).run()
-page_obj.browser.close()
+page = Page(url='https://astrolibrary.org/free-birth-chart/').run()
+parser = PlanetParser(html=page.report_html).run()
+filepath = 'charts'
+extension = 'md'
 
+def make_files(planets):
+    for planet in planets:
+        filename = f"{filepath}/{planet.get('name')}.{extension}"
+        f = open(filename, "w")
+        f.write(planet.get('content'))
+        f.close()
+
+make_files(parser.planets)
 import pdb;pdb.set_trace()

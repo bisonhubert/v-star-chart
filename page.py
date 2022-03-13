@@ -3,7 +3,7 @@ import time
 from selenium.webdriver import Firefox
 from selenium.webdriver.support.select import Select
 
-class PageObj:
+class Page:
     def __init__(self, url=None):
         self.url = url
         self.browser = None
@@ -59,6 +59,9 @@ class PageObj:
         self.report = report
         self.report_html = report.get_attribute('innerHTML')
 
+    def _close_browser(self):
+        self.browser.close()
+
     def run(self, hour=None, minute=None):
         self._get_page()
         self._set_name()
@@ -70,4 +73,5 @@ class PageObj:
         self._set_location()
         self._submit()
         self._set_report()
+        self._close_browser()
         return self
