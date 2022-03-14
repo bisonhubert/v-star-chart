@@ -142,7 +142,7 @@ Thus your romances may start off in a blaze of excitement and glory only to end 
 
 Venus worst qualities are trying too hard to please others and taking the line of least resistance. In relationships, then, you may choose partners who tend to dominate you and want you to do things their way at the expense of your own wishes. Venus in Aries calls for you to be assertive, yet not dominating. Pleasing, yet not a dishrag.
 
-You are independent and have an impulsive approach to love. You like competitiveness and perhaps pick fights just for the action and excitement. You can be very inconsiderate of others because you sometimes do not think about your actions and they effects they have on those closest to you. Impatience and selfishness can be a problem for you. Read more about 
+You are independent and have an impulsive approach to love. You like competitiveness and perhaps pick fights just for the action and excitement. You can be very inconsiderate of others because you sometimes do not think about your actions and they effects they have on those closest to you. Impatience and selfishness can be a problem for you.
 
 
 ## Venus | Pisces 25.7% <a name='venus-pisces'></a>
