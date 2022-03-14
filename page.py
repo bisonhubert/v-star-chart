@@ -48,7 +48,7 @@ class Page:
     def _set_location(self):
         location = self.browser.find_element_by_id("placein")
         location.send_keys("Galveston")
-        time.sleep(2)
+        time.sleep(3)
         location_results = self.browser.find_element_by_id("autoComplete_results_list")
         location_results.find_elements("tag name", "li")[0].click()
 
