@@ -28,14 +28,20 @@ class Page:
         year.send_keys("1989")
 
     def _set_hour(self, hour=None):
+        # hours are 1-indexed in the form
         if hour is None:
             hour = 1
+        else:
+            hour += 1
         hour_selector = Select(self.browser.find_element_by_id("hour"))
         hour_selector.select_by_index(hour)
 
     def _set_minute(self, minute=None):
+        # minutes are 1-indexed in the form
         if minute is None:
             minute = 1
+        else:
+            minute += 1
         minute_selector = Select(self.browser.find_element_by_id("minute"))
         minute_selector.select_by_index(minute)
 

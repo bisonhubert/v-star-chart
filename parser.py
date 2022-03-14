@@ -5,7 +5,6 @@ class PlanetParser:
     def __init__(self, html=None):
         self.html = html
         self.soup = None if html is None else BeautifulSoup(html, "html.parser")
-        self.chart_img_src = None
         self.planets = None
 
     def _get_planets(self):
@@ -49,6 +48,5 @@ class PlanetParser:
     def run(self):
         if self.soup is None:
             return self
-        self.chart_img_src = self.soup.img.get("src")
         self.planets = self._get_planets()
         return self
