@@ -48,6 +48,6 @@ class PlanetParser:
     def run(self):
         if self.soup is None:
             return self
-        self.chart_img_src = self.soup.img["src"]
+        self.chart_img_src = self.soup.img.get("src")
         self.planets = self._get_planets()
         return self
