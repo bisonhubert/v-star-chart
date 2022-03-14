@@ -1,6 +1,6 @@
 import time
 
-from selenium.webdriver import Firefox
+from selenium.webdriver import Firefox, FirefoxOptions
 from selenium.webdriver.support.select import Select
 
 
@@ -52,7 +52,9 @@ class Page:
         time.sleep(1)
 
     def _get_page(self):
-        self.browser = Firefox()
+        options = FirefoxOptions()
+        options.headless = True
+        self.browser = Firefox(options=options)
         self.browser.get(self.url)
 
     def _set_report(self):
