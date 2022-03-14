@@ -6,8 +6,8 @@ from parser import PlanetParser
 HOURS = list(range(12, 18))  # 11AM - 5PM
 MINUTES = list(range(1, 61))  # every minute
 # test with these settings
-HOURS = list(range(12, 14))
-MINUTES = list(range(1, 3))
+# HOURS = list(range(12, 14))
+# MINUTES = list(range(1, 3))
 URL = "https://astrolibrary.org/free-birth-chart/"
 
 
