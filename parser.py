@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 class PlanetParser:
     def __init__(self, html=None):
         self.html = html
-        self.soup = None if html is None else BeautifulSoup(html, 'html.parser')
+        self.soup = None if html is None else BeautifulSoup(html, "html.parser")
         self.chart_img_src = None
         self.planets = None
 
@@ -34,15 +34,16 @@ class PlanetParser:
                             content = f'{node["content"]}\n{content}'
                         node["content"] = content
             else:
-                current_node_name = tag.contents[0].split(" ")[0].lower()
+                content = f"{tag.contents[0]}\n"
+                current_node_name = content.split(" ")[0].lower()
                 if node is None:
-                    node = {"name": current_node_name, "content": ""}
+                    node = {"name": current_node_name, "content": content}
                 if node["name"] != current_node_name:
                     node_counter += 1
                     if node_counter > 11:
                         break
                     nodes.append(node)
-                    node = {"name": current_node_name, "content": ""}
+                    node = {"name": current_node_name, "content": content}
         return nodes
 
     def run(self):
